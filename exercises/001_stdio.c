@@ -159,7 +159,7 @@
  * - stdout is commonly line-buffered when connected to an interactive terminal.
  * - stdout is commonly fully-buffered when redirected to a file or pipe.
  * - stderr is commonly completely unbuffered.
- * - stdin  is commonly fully buffer.
+ * - stdin  is commonly fully buffered.
  *
  * NOTE: The C function setvbuf() can configure a stream's buffering mode.
  * It must be used before other operations are performed on that stream.
@@ -302,6 +302,7 @@ int main() {
     // GOAL: Read characters with getchar() until the user presses Enter.
     //       Echo every character using putchar(), and count how many characters were entered.
     //       Do not include the newline in your count. Handle EOF too.
+    //       (Remember that a typical terminal echoes characters itself while typing. Your program will echo them again after Enter)
 
 
 
