@@ -66,7 +66,7 @@ zig cc <file>
 
 Using `just`, from the top-level directory:
 ```bash
-just <file>
+just run <file>
 ```
 
 Can list all exercises with:
