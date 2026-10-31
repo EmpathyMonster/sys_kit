@@ -301,17 +301,19 @@ int main() {
 
     // GOAL: Read characters with getchar() until the user presses Enter.
     //       Echo every character using putchar(), and count how many characters were entered.
+    //       Do not include the newline in your count. Handle EOF too.
 
 
 
-    // GOAL: Use fgets() with a tiny 8-byte buffer and ask for a longer sentence.
+    // GOAL: Use fgets() with a tiny 8-byte buffer and ask for a sentence longer than 7 characters.
     //       Detect whether the entire line was read. If not, consume the remaining characters until '\n'.
     //       Then read another line to verify that stdin is clean.
 
 
 
     // GOAL: Read one character, push it back into stdin, and read it again.
-    //       Verify that you received the same character without typing twice. (hint: ungetc(), explain what it does)
+    //       Verify that you received the same character without typing twice.
+    //       (hint: ungetc(), explain what it does, dont forget to check it succeded, try to explain when it could fail)
 
 
 
