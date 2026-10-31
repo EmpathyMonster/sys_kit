@@ -11,7 +11,7 @@
  *   2. C standard I/O (stdio) API
  *
  * This exercise doesn't provide any code skeleton and is intentionally comments only.
- * In main there are small golas in comments.
+ * Read the explanations, then there is main with small golas in comments.
  * Implement each tiny goal immediately below its instructions.
  *
  * NOTE: POSIX functions are Unix/POSIX interfaces, not ISO (standardized) C.
