@@ -29,8 +29,6 @@ You should be comfortable with:
 - Basic command-line usage
 - Reading error messages and debugging with `gdb`/`lldb` or an IDE
 
-If you're rusty on OS fundamentals (processes, threads, virtual memory), check the appendix or the recommended reading section.
-
 ---
 
 ## Structure
@@ -50,12 +48,30 @@ Start at `chapters/README.md` for a suggested order. Jump around if you prefer, 
 
 ## Running the examples
 
-Most examples are self-contained and build with standard toolchains:
+Examples are self-contained and build with standard toolchains:
 
+With a standard C compiler:
 ```bash
-cd examples/<chapter-name>
-make        # or cmake / cargo / go build, depending on the subdir
-./program
+cd examples/
+cc <file>
+./a.out
+```
+
+Using `zig cc` manually:
+```bash
+cd examples/
+zig cc <file>
+./a.out
+```
+
+Using `just`, from the top-level directory:
+```bash
+just <file>
+```
+
+Can list all exercises with:
+```bash
+just list
 ```
 
 If something doesn't compile or behaves oddly, open an issue with your platform and compiler version.
@@ -83,8 +99,6 @@ Found a mistake? That's fine — tell us. Open an issue with:
 2. The problematic excerpt
 3. A suggested correction (optional but helpful)
 
-For typos, feel free to just fix it in a PR.
-
 ---
 
 ## Licence
@@ -95,7 +109,7 @@ Content is licensed under CC BY-SA 4.0. Code examples are MIT licensed unless st
 
 ## Credits
 
-Built by contributors including [list people here]. Inspired by talks, blog posts, and textbooks from the broader systems community — full attributions in `resources/`.
+Built by contributors including (TODO). Inspired by talks, blog posts, and textbooks from the broader systems community — full attributions in `resources/`.
 
 ---
 
@@ -107,6 +121,6 @@ What's being worked on next lives in the issues pinned to the top. If you're eag
 
 ## Contact
 
-Questions? Suggestions? Raise an issue, or ping [@your-handle] in discussions if it feels too open-ended for a bug report.
+Questions? Suggestions? Raise an issue, or ping a maintainer in discussions if it feels too open-ended for a bug report.
 
 Happy hacking.
