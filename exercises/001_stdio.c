@@ -11,6 +11,7 @@
  *   2. C standard I/O (stdio) API
  *
  * This exercise doesn't provide any code skeleton and is intentionally comments only.
+ * In main there are small golas in comments.
  * Implement each tiny goal immediately below its instructions.
  *
  * NOTE: POSIX functions are Unix/POSIX interfaces, not ISO (standardized) C.
@@ -88,7 +89,9 @@
  *     |    SYSCALL into kernel    | Kernel has nothing yet, so program is paused (blocking syscall, you may have heard of it)
  *     +---------------------------+
  *
+ *
  *     // User has typed "ABC".      (followed by Enter, assuming a terminal in canonical mode)
+ *
  *
  *     +---------------------------+
  *     |        TERMINAL           |
@@ -97,19 +100,19 @@
  *               |
  *               v
  *     +---------------------------+
- *     |          KERNEL           |
- *     |  Receives terminal input  |
+ *     |          KERNEL           | stdio passed the address of its internal input buffer to read() which then gave it to the syscall
+ *     |  Receives terminal input  | kernel copies the received bytes directly into that memory
  *     +---------------------------+
  *               |
  *               | Kernel sees the waiting read syscall, and wakes our program giving it the typed text.
  *               v
  *     +---------------------------+
- *     |   read SYSCALL returned   | At this point we actually have the bytes in the buffer, because the buffer was ideally given to the syscall
+ *     |   read SYSCALL returned   | with status code giving us more info how the read went
  *     +---------------------------+
  *               |
  *               v
  *     +---------------------------+
- *     |  POSIX FD read returned   |
+ *     |  POSIX FD read returned   | with -1 or length of the buffer filled
  *     +---------------------------+
  *               |
  *               v
@@ -140,7 +143,8 @@
  * Flushing output means asking the C library to pass pending bytes in a
  * stream's output buffer to the underlying destination.
  *
- * Flush is generally called on file close and for stdin/out/err on program exit.
+ * Flush is generally called when output stream is closed using fclose().
+ * The program terminates normally, aka. returning from main or calling exit().
  *
  * A newline often causes stdout to flush when stdout is connected to an
  * interactive terminal, because it is commonly line-buffered. This is a
