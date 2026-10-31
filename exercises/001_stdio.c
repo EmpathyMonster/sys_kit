@@ -261,7 +261,59 @@
 
 
 // Now to get some use out of our newly gained knowledge
+// For functions you dont know, use MANpages or in last resort internet.
 
 int main() {
-    // TODO: guiding comments, for now you can just try the discussed topics above
+    // GOAL : Use putchar() to draw a tiny smiley face using individual characters.
+    //        (Do not use printf() or puts())
+
+
+
+    // GOAL : Print a sentence in two calls using fputs().
+    //        (Notice that neither call adds a newline. Add one yourself)
+
+
+
+    // GOAL : Print a tiny scoreboard using printf(), including an integer and a character.
+    //        (more on that later)
+
+
+
+    // GOAL : Print a normal message to stdout and a warning to stderr using fprintf().
+    //        (Flush stdout before printing the warning. Notice that they are separate streams)
+
+
+
+    // GOAL : Print "Press Enter to continue..." without a newline.
+    //        (Explicitly flush stdout, then wait for the user to press Enter using getchar())
+
+
+
+    // GOAL : Read two characters using getchar() and print them back using putchar().
+    //        (Enter both characters on the same line. Consume the remaining newline too, explain how the buffering works there, try it from your memory)
+
+
+
+    // GOAL : Ask the user for their name, read it using fgets(), and print it back.
+    //        (Use a fixed-size character array. Try a name containing spaces)
+
+
+
+    // GOAL: Read characters with getchar() until the user presses Enter.
+    //       Echo every character using putchar(), and count how many characters were entered.
+
+
+
+    // GOAL: Use fgets() with a tiny 8-byte buffer and ask for a longer sentence.
+    //       Detect whether the entire line was read. If not, consume the remaining characters until '\n'.
+    //       Then read another line to verify that stdin is clean.
+
+
+
+    // GOAL: Read one character, push it back into stdin, and read it again.
+    //       Verify that you received the same character without typing twice. (hint: ungetc(), explain what it does)
+
+
+
+    // You can think of other things to try out.
 }
